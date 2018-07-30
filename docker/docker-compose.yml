@@ -1,1 +1,10 @@
 version: '3'
+services:
+  challenge:
+    build: challenge/.
+    image: crossbeam/challenge
+    volumes:
+      - ../app/crossbeam:/app
+    entrypoint: /bin/bash -c "cd /app/challenge && mix deps.get && mix escript.build && ./challenge $${0}"
+
+    
