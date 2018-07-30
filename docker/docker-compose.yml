@@ -3,8 +3,9 @@ services:
   challenge:
     build: challenge/.
     image: crossbeam/challenge
+    tty: true
     volumes:
       - ../app/crossbeam:/app
-    entrypoint: /bin/bash -c "cd /app/challenge && mix deps.get && mix escript.build && ./challenge $${0}"
+    entrypoint: /bin/bash -c "cd /app/challenge && mix deps.get && mix escript.build && ./challenge $${0} $${1}"
 
     
