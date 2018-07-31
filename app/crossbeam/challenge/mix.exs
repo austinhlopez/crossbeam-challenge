@@ -15,7 +15,9 @@ defmodule Challenge.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    [
+      mod: {Server, []},
+      applications: [:cowboy, :plug, :logger]]
   end
 
   # Dependencies can be Hex packages:
@@ -29,6 +31,10 @@ defmodule Challenge.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [{:httpoison, "~> 1.2"},
-    {:poison, "~> 3.1"}]
+     {:poison, "~> 3.1"},
+     {:cowboy, "~> 1.0"},
+     {:plug, "~> 1.6.1"},
+     {:basic_auth, "~> 2.2"}
+    ]
   end
 end

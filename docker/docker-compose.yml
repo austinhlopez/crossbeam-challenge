@@ -4,8 +4,11 @@ services:
     build: challenge/.
     image: crossbeam/challenge
     tty: true
+    ports:
+      - 8080:8080
     volumes:
       - ../app/crossbeam:/app
-    entrypoint: /bin/bash -c "cd /app/challenge && mix deps.get && mix escript.build && ./challenge $${0} $${1}"
+    entrypoint: /bin/bash -c "cd /app/challenge && mix deps.get && mix run --no-halt"
+    # escript.build && ./challenge $${0} $${1}"
 
     

@@ -24,3 +24,10 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
+
+config :challenge, basic_auth: [
+  username: "admin",
+  password: "simple_password",
+  realm: "Admin Area"
+]
+  
