@@ -1,7 +1,7 @@
 # crossbeam-challenge
 
 ### Instructions
-
+* git clone this repo
 * Install docker-compose: [Docker-Compose](https://docs.docker.com/compose/install/)
 * cd docker
 * docker-compose run challenge \<dataset1\> \<dataset2\>
