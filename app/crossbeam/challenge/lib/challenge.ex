@@ -4,7 +4,7 @@ defmodule Challenge do
     # map over list of datasets
     maps = Enum.map(datasets,
       fn dataset ->	
-p	url = "https://s3.amazonaws.com/challenge.getcrossbeam.com/public/" <> dataset <> ".json"
+	url = "https://s3.amazonaws.com/challenge.getcrossbeam.com/public/" <> dataset <> ".json"
 
 	response = HTTPoison.get!(url)
 
