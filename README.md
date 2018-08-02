@@ -44,5 +44,6 @@ end
 ### Next Steps
 * Ansible Playbook (if docker/docker-compose isnt desired)
 * HTTP server/endpoint
-* Unit testing w/ dummy files
+* Unit testing w/ dummy data, response status handling
+* multi-file command line (find overlap on domains for N datasets, not just 2)
 * optional type checking, process monitoring
