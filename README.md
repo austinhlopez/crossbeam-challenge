@@ -15,7 +15,7 @@
     # map over list of datasets                                        
     maps = Enum.map(datasets,                                          
       fn dataset ->                                                    
-p       url = "https://s3.amazonaws.com/challenge.getcrossbeam.com/pub\
+       url = "https://s3.amazonaws.com/challenge.getcrossbeam.com/pub\
 lic/" <> dataset <> ".json"                                            
                                                                        
         response = HTTPoison.get!(url)                                 
